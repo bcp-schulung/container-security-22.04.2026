@@ -1,0 +1,7 @@
+*.sh
+docker-compose.yaml
+.git
+.gitignore
+*.md
+*.csv
+*.txt

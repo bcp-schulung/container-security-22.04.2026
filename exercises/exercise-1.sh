@@ -22,3 +22,13 @@ sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 sudo docker ps
 
 sudo docker run -d -p 80:80 --name webserver nginx
+
+ps aux | grep nginx
+
+sudo docker stop webserver
+
+sudo docker ps -a
+
+sudo docker rm webserver
+
+sudo docker images

@@ -1,0 +1,7 @@
+services:
+  web:
+    image: registry.it-scholar.com/bc/mynginx:v1
+    volumes:
+     - ./index.html:/usr/share/nginx/html/index.html:ro
+    ports:
+     - "8181:80"

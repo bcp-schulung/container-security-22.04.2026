@@ -6,3 +6,8 @@ docker ps
 
 curl http://localhost:8080
 
+docker images
+
+docker tag mynginx:latest registry.it-scholar.com/$USER/mynginx:v1
+
+docker push registry.it-scholar.com/$USER/mynginx:v1

@@ -32,3 +32,5 @@ sudo docker ps -a
 sudo docker rm webserver
 
 sudo docker images
+
+sudo docker pull nginx:1.29.6

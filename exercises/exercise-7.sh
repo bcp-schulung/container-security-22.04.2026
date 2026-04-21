@@ -36,3 +36,5 @@ kubectl config get-contexts
 kubectl config use-context alice-team-alice
 
 kubectl get pods
+
+kubectl apply -f deployment.yaml

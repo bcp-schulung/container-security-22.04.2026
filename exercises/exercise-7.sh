@@ -24,4 +24,13 @@ kubectl config set-context alice-team-alice \
   --user=alice \
   --namespace=team-alice
 
-  
+kubectl create rolebinding alice-admin-binding \
+    --clusterrole=admin \
+    --user=alice \
+    --namespace=team-alice
+
+kubectl config get-contexts
+
+kubectl config use-context alice-team-alice
+
+kubectl get pods

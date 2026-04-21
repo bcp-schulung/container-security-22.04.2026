@@ -19,6 +19,8 @@ kubectl config set-credentials alice \
 
 kubectl config get-contexts
 
+kubectl config use-context kubernetes-admin@kubernetes
+
 kubectl config set-context alice-team-alice \
   --cluster=<YOUR_CLUSTER_NAME> \
   --user=alice \

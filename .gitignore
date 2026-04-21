@@ -12,3 +12,4 @@ setup/deploy_vscodium.sh
 *.swp
 *.swo
 *~
+setup/update_kubectl_kubeconfig.sh

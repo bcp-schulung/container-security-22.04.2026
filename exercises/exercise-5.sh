@@ -1,3 +1,3 @@
 sudo docker ps
-sudo docker compose up -d -f docker-compose-wordpress.yml
+sudo docker compose -f docker-compose-wordpress.yaml up -d
 sudo docker ps

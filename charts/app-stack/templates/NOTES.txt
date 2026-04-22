@@ -1,0 +1,26 @@
+app-stack deployed to namespace: {{ .Values.namespace }}
+
+Tiers:
+  frontend  — {{ .Values.frontend.replicas }} replica(s), Service type: {{ .Values.frontend.service.type }}
+  backend   — {{ .Values.backend.replicas }} replica(s), Service type: {{ .Values.backend.service.type }}
+  db        — {{ .Values.db.replicas }} replica(s), Service type: {{ .Values.db.service.type }}
+
+Image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+
+NetworkPolicies: {{ if .Values.networkPolicy.enabled }}enabled{{ else }}disabled{{ end }}
+  Traffic is locked down to:
+    external → frontend:80
+    frontend → backend:80
+    backend  → db:80
+    all pods → kube-system:53 (DNS)
+
+To install:
+  helm install app-stack ./charts/app-stack
+
+To install without NetworkPolicies:
+  helm install app-stack ./charts/app-stack --set networkPolicy.enabled=false
+
+To override replicas:
+  helm install app-stack ./charts/app-stack \
+    --set frontend.replicas=2 \
+    --set backend.replicas=2

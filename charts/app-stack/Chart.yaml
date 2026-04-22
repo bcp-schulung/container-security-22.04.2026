@@ -1,0 +1,6 @@
+apiVersion: v2
+name: app-stack
+description: Three-tier application (frontend / backend / db) with Kubernetes NetworkPolicies
+type: application
+version: 0.1.0
+appVersion: "1.29.6"
